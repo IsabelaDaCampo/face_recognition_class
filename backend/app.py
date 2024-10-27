@@ -4,8 +4,10 @@ from werkzeug.utils import secure_filename
 from datetime import datetime
 from utils.face_recognition import recognize_face
 from utils.save_student import save_student_picture
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 UPLOAD_FOLDER = 'uploads/'
 PRESENCA_FOLDER = 'presenca/'
@@ -105,4 +107,4 @@ if __name__ == '__main__':
         os.makedirs(app.config['UPLOAD_FOLDER'])
     if not os.path.exists(app.config['PRESENCA_FOLDER']):
         os.makedirs(app.config['PRESENCA_FOLDER'])
-    app.run(debug=True)
+app.run(host='0.0.0.0', port=5000, debug=True)
