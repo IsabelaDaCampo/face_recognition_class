@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "0d32c4c9-f0e2-4261-9f08-b25fb6e02a3f",
+		"name": "face_recognition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7532989"
+	},
+	"item": [
+		{
+			"name": "Reconhecer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/isabe/OneDrive/Área de Trabalho/Imagens aula/WhatsApp Image 2024-10-27 at 15.42.02.jpeg"
+						},
+						{
+							"key": "class",
+							"value": "turma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recognize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recognize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/isabe/OneDrive/Área de Trabalho/Imagens aula/WIN_20241027_10_18_31_Pro.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Isabela",
+							"type": "text"
+						},
+						{
+							"key": "class",
+							"value": "2024-Gerencia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/save-student",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"save-student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Presences",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/presences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"presences"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
