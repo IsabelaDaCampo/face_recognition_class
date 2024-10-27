@@ -40,6 +40,7 @@ Para instalar o projeto, siga os passos abaixo:
    ```bash
    python -m venv venv
    source venv/bin/activate  # No Windows use: venv\Scripts\activate
+   python app.py 
    ```
 
 4. **Instale as dependências:**
